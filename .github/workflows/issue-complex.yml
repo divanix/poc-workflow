@@ -1,0 +1,24 @@
+name: Multi-step injection
+
+on: [issues]
+
+jobs:
+  parse_body:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    outputs:
+      any_link: ${{ steps.parse.outputs.any_link }}
+    steps:
+    - name: Parsing the issue body
+      id: parse
+      run: |
+        echo ${{ github.event.issue.body }} > body
+        grep "Link: " body | cat temp
+        echo ::set-output name=any_link::$(cat temp)
+  process:
+    runs-on: ubuntu-latest
+    needs: parse_body
+    steps:
+      - run: |
+          echo "This is the link we got: ${{ needs.parse_body.outputs.any_link }}"
