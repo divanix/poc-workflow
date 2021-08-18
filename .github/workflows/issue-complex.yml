@@ -14,8 +14,11 @@ jobs:
       id: parse
       run: |
         echo ${{ github.event.issue.body }} > body
-        grep "Link: " body | cat > temp
+        cat body
+        grep "^Link:" body | cat > temp
+        cat temp
         sed 's/Link: //' temp > any_link
+        cat any_link
         echo ::set-output name=any_link::$(cat any_link)
   process:
     runs-on: ubuntu-latest
