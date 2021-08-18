@@ -13,7 +13,7 @@ jobs:
     - name: Parsing the issue body
       id: parse
       run: |
-        echo ${{ github.event.issue.body }} > body
+        echo "${{ github.event.issue.body }}" > body
         cat body
         grep "^Link:" body | cat > temp
         cat temp
@@ -25,4 +25,4 @@ jobs:
     needs: parse_body
     steps:
       - run: |
-          echo "This is the link we got: ${{ needs.parse_body.outputs.any_link }}"
+          echo 'This is the link we got: ${{ needs.parse_body.outputs.any_link }}'
