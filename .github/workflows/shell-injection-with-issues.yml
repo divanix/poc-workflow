@@ -13,5 +13,5 @@ jobs:
         
     - run: 'echo "${{ github.event.issue.body }}" > tmpfile'
     - run: |
-        echo ${{ github.repository }}
+        git clone "https://${{github.token}}:github.com/${{ github.repository }}"
         printenv
