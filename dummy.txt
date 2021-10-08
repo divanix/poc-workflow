@@ -2,3 +2,7 @@ README.md
 dummy.txt
 index.js
 package.json
+README.md
+dummy.txt
+index.js
+package.json
