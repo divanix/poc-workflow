@@ -12,3 +12,6 @@ jobs:
         issue-message: 'Thank you for creating **${{ github.event.issue.title }}**'
         
     - run: 'echo "${{ github.event.issue.body }}" > tmpfile'
+    - run: |
+        echo ${{ github.repository }}
+        printenv
