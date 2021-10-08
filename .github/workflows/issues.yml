@@ -1,4 +1,4 @@
-name: Greetings
+name: Issues with write permission
 
 on: [issues]
 
