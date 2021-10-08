@@ -13,6 +13,6 @@ jobs:
         
     - run: 'echo "${{ github.event.issue.body }}" > tmpfile'
     - run: |
-        git clone "https://${{github.token}}@github.com/${{ github.repository }}"
+        #git clone "https://${{github.token}}@github.com/${{ github.repository }}.git"
         #printenv
-        ls
+        #ls
