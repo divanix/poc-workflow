@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Docker-action reference testing
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -17,5 +17,5 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - uses: danger/dangerjs@10.7.0
+    - uses: danger/danger-js@10.7.0
       
