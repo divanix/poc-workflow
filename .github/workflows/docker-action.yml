@@ -16,6 +16,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - run: sudo printenv
     # Runs a single command using the runners shell
     - uses: danger/danger-js@10.7.0
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
       
