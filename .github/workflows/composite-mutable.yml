@@ -14,4 +14,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - uses: divanix/poc-action/mutable/commit-referenced@3f8219a038caa2381a9e515517f659bbb511480f
+    - uses: divanix/poc-action/mutable/commit-referenced@9b4d18740b377a71a546f8b564fbb8cc848ced79
