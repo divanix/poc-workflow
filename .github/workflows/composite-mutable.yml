@@ -15,3 +15,5 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - uses: divanix/poc-action/mutable/commit-referenced@9b4d18740b377a71a546f8b564fbb8cc848ced79
+    - run: |
+        ls -a /home/runner
