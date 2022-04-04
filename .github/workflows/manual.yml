@@ -35,3 +35,5 @@ jobs:
         run: echo '${{ toJSON(strategy) }}'
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
+      - name: Testing the events
+        run: echo ${{ event.inputs.name }}
