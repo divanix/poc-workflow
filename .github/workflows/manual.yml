@@ -36,4 +36,4 @@ jobs:
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
       - name: Testing the events
-        run: echo ${{ github.event.inputs.name }}
+        run: echo ${{ inputs.name }}
